@@ -1,0 +1,72 @@
+$xs-breakpoint: 400px;
+$sm-breakpoint: 600px;
+$md-breakpoint: 900px;
+$lg-breakpoint: 1200px;
+$xl-breakpoint: 1536px;
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.registration__slider_container {
+    display: flex ;
+    align-items: center;
+    min-height: 100dvh;
+    position: absolute;
+    width: 100%;
+}
+
+.registration__form__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, #373B44, #556cd6);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    .MuiTypography-root {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        
+        @media screen and (max-width: $sm-breakpoint) {
+            font-size: 1.25rem;
+        }
+        @media screen and (max-width: $xs-breakpoint) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.registration__register_success {
+    padding: 24px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    
+
+    @media screen and (max-width: $sm-breakpoint) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        justify-items: center;
+    }
+}
+
+.registration__register_success__text {
+    margin-left: 16px;
+
+    @media screen and (max-width: $sm-breakpoint) {
+        text-align: center;
+        margin: 16px 0;
+    }
+}
+
+.registration__register_success__logo {
+    font-size: 52px;
+
+    @media screen and (max-width: $sm-breakpoint) {
+        font-size: 72px;
+    }
+}
