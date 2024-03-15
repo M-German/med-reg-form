@@ -5,7 +5,7 @@ interface RegistrationForm {
     genderId: number | "";
     clientGroupId: number | "";
     doctorId: number | "";
-    sendEmail: boolean;
+    sendSMS: boolean;
 }
 
 export default RegistrationForm;

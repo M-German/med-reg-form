@@ -35,7 +35,7 @@ const DEFAULT_FORM: RegForm = {
     genderId: "",
     clientGroupId: "",
     doctorId: "",
-    sendEmail: true,
+    sendSMS: true,
 }
 
 const today = moment();
@@ -333,10 +333,10 @@ export const RegistrationForm: React.FC<Props> = forwardRef((props, ref: any) =>
                     </Button>
                     <Controller
                         control={control}
-                        name="sendEmail"
+                        name="sendSMS"
                         render={({ field: { value, ...rest } }) => (
                             <FormControlLabel
-                                label="Отправить Email"
+                                label="Отправить SMS"
                                 control={
                                     <Checkbox
                                         {...rest}
