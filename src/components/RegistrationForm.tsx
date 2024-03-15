@@ -41,7 +41,7 @@ const DEFAULT_FORM: RegForm = {
 const today = moment();
 const minDate = moment().subtract(150, 'years');
 const DADATA_API_KEY = import.meta.env.VITE_DADATA_TOKEN;
-const DEBOUNCE_TIMER = 700;
+const DEBOUNCE_TIMER = 500;
 
 export const RegistrationForm: React.FC<Props> = forwardRef((props, ref: any) => {
     const { genders, onRegister } = props;
@@ -127,7 +127,7 @@ export const RegistrationForm: React.FC<Props> = forwardRef((props, ref: any) =>
 
         if (cleared.length <= 3) formatted += cleared
         else {
-            formatted += ` (${cleared.substring(0, 3)}) ${cleared.substring(3, 6)}`;
+            formatted += `(${cleared.substring(0, 3)}) ${cleared.substring(3, 6)}`;
             if (cleared.length > 6) formatted += `-${cleared.substring(6, 8)}`;
             if (cleared.length > 8) formatted += `-${cleared.substring(8, 10)}`;
         }
